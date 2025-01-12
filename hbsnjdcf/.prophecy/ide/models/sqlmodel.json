@@ -1,0 +1,84 @@
+{
+  "id" : "sqlmodel",
+  "metainfo" : {
+    "label" : "sqlmodel",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "sqlmodel##oOHRYAru" : {
+      "id" : "sqlmodel##oOHRYAru",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "sqlmodel",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM test_customer_model\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "K2gIjy3h",
+          "slug" : "test_customer_model"
+        } ],
+        "outputs" : [ {
+          "id" : "zt8oq5HP",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "xwrSnvJxSPGvYQuxPjABo" : {
+      "id" : "xwrSnvJxSPGvYQuxPjABo",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "test_customer_model",
+        "slug" : "test_customer_model",
+        "x" : -180,
+        "y" : 0,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "test_customer_model",
+          "sourceType" : "Source",
+          "sourceName" : "hive_metastore.6b418a6c8a0d64099bf222f6b86d0b51",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "9OuF2J9qqbrK9KacbrJmn",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "BvomFoRr6TIW8TW_SPxeK$$49AOjA9yjCX-dJCaxvFTj",
+    "source" : "xwrSnvJxSPGvYQuxPjABo",
+    "sourcePort" : "9OuF2J9qqbrK9KacbrJmn",
+    "target" : "sqlmodel##oOHRYAru",
+    "targetPort" : "K2gIjy3h"
+  } ],
+  "component" : "Model"
+}

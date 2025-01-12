@@ -1,0 +1,50 @@
+---
+version: 2
+sources:
+- name: "hive_metastore.6b418a6c8a0d64099bf222f6b86d0b51"
+  database: "hive_metastore"
+  schema: "6b418a6c8a0d64099bf222f6b86d0b51"
+  config:
+    enabled: true
+  quoting:
+    schema: true
+  tables:
+  - name: "test_customer_model"
+    description: "A dataset containing customer information such as phone number,\
+      \ first name, last name, email, account open date, and account flags. This dataset\
+      \ does not have any associated pipelines."
+    quoting:
+      identifier: true
+    columns:
+    - name: "customer_id"
+      description: "The unique identifier for the customer"
+      dataType:
+        type: "Bigint"
+    - name: "first_name"
+      description: "The first name of the customer"
+      dataType:
+        type: "String"
+    - name: "last_name"
+      description: "The last name of the customer"
+      dataType:
+        type: "String"
+    - name: "phone"
+      description: "Phone number associated with the customer"
+      dataType:
+        type: "String"
+    - name: "email"
+      description: "Email address of the customer"
+      dataType:
+        type: "String"
+    - name: "country_code"
+      description: "The country code associated with the customer's location"
+      dataType:
+        type: "String"
+    - name: "account_open_date"
+      description: "The date when the customer's account was opened"
+      dataType:
+        type: "Date"
+    - name: "account_flags"
+      description: "Flags associated with the customer's account"
+      dataType:
+        type: "String"
